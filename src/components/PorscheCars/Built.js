@@ -1,7 +1,56 @@
 import React from "react";
-import { ArrowBarLeft, ArrowLeft, ChevronLeft } from "react-bootstrap-icons";
+import {ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 import style from "../../style/Built.module.css";
-import { PBuilt } from "./PBuilt";
+import { PBuilt} from "./PBuilt";
+const Data=[
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718-c7-modelimage-sideshot/thumbwhite/230138a1-e874-11ea-80cd-005056bbdc38;sL;twebp/porsche-thumbwhite.webp",
+        sname:"718 Cayman",
+    },
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718-bo-modelimage-sideshot/thumbwhite/85f01af2-a8ce-11eb-80d5-005056bbdc38;sR;twebp/porsche-thumbwhite.webp",
+        sname:"718 Boxster",  
+    },
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718-c7-se-modelimage-sideshot/thumbwhite/7bdc3629-4ea4-11ed-80f7-005056bbdc38;sL;twebp/porsche-thumbwhite.webp",
+        sname:"718 Cayman Style Edition",        
+    },
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718-bo-se-modelimage-sideshot/thumbwhite/a43e6499-4ea4-11ed-80f7-005056bbdc38;sL;twebp/porsche-thumbwhite.webp",
+        sname:"718 Boxster Style Edition",
+    },
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718-c7s-modelimage-sideshot/thumbwhite/c479e09b-d5ba-11ec-80ef-005056bbdc38;sL;twebp/porsche-thumbwhite.webp",
+        sname:"718 Cayman S",
+    },
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718-bos-modelimage-sideshot/thumbwhite/a20dde91-bbf3-11ec-80ed-005056bbdc38;sL;twebp/porsche-thumbwhite.webp",
+        sname:"718 Boxster S"
+    },
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718-c7-gts-4-modelimage-sideshot/thumbwhite/780ea921-a8d0-11eb-80d5-005056bbdc38;sR;twebp/porsche-thumbwhite.webp",
+        sname:"718 Cayman GTS 4.0"
+    },
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718-bo-gts-4-modelimage-sideshot/thumbwhite/d5906520-2308-11ea-80c6-005056bbdc38;sL;twebp/porsche-thumbwhite.webp",
+        sname:"718 Boxster GTS 4.0"
+    }
+]
+const sports = [
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718gt4-modelimage-sideshot/thumbwhite/3c0c6b3d-fa4e-11e9-80c6-005056bbdc38;sL;twebp/porsche-thumbwhite.webp",
+        sname:"718 Cayman GT4 "
+    },
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718spyder-modelimage-sideshot/thumbwhite/e9f11134-fa4e-11e9-80c6-005056bbdc38;sL;twebp/porsche-thumbwhite.webp",
+        sname:"718 Spyder "
+    },
+    {
+        imgsrc:"https://files.porsche.com/filestore/image/multimedia/none/982-718-cayman-gt4rs-modelimage-sideshot/thumbwhite/da102245-46e5-11ec-80e2-005056bbdc38;sL;twebp/porsche-thumbwhite.webp",
+        sname:"718 Cayman GT4 RS "
+    }
+]
+
 //var slider = document.getElementById("myRange");
 //var output = document.getElementById("demo");
 //output.innerHTML = slider.value;
@@ -84,9 +133,23 @@ export const Built= () => {
                     </div>
                 </div>
                 <div className={style.rightmain}>
-                <h3>718 Models</h3>
-                    <PBuilt/>
-                    
+                
+                <h1 className={style.heading}> <ChevronRight/>718 Models</h1>
+                    {Data.map((datas)=>(
+                        <PBuilt
+                        imgsrc={datas.imgsrc}
+                        sname={datas.sname}
+                        />
+                        ))}
+                  {sports.map((mapping)=>(
+                    <div>
+                        <h1 className={style.heading}> <ChevronRight/>{mapping.sname}</h1> 
+                        <PBuilt
+                        imgsrc={mapping.imgsrc}
+                        sname={mapping.sname}
+                        />
+                  </div>
+                  ))} 
                 </div>
             </div>
            

@@ -5,61 +5,36 @@
 }
 .modelContainer {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     overflow-x: hidden;
     padding-right: 0;
-    
-
 }
-.modelContainer div {
-    width: 28em;
+.modelContainer .modelBox h2 {
+    margin-left: 30px;
+    font-size: 35px;
+    visibility: hidden;
+}
+
+.modelBox {
+    width: 33%;
     height: 20em;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     margin-right: 0;
     object-fit:scale-down;
-    
-    
-
-}
-
-.modelContainer div h2 {
-    margin-left: 30px;
-    font-size: 35px;
-}
-
-.modelBox {
-    background-image: url("https://clients.contology.com/Client/__Blank-Templates__/Trim-Page-Template/2020/Porsche/718/images/Image01.jpg");
     background-position: center;
     background-size: cover;
 }
-.modelBox2 {
-    background-image: url("https://cdnwp-s3.benzinga.com/wp-content/uploads/2021/03/17170753/img_60526fa8dd93e.png?optimize=medium&dpr=1.5&auto=webp&width=1080");
-    background-position: center;
-    background-size: cover;
+.modelBox:hover{
+    background-color: black;
+    opacity: 50%;
 }
-.modelBox3 {
-    background-image: url("https://pictures.dealer.com/p/porscheofarlington/0801/6b1522f319309fc75d64eecad957b17bx.jpg");
-    background-position: center;
-    background-size: cover;
+.modelBox:hover h2{
+    color:black;
+    visibility : visible;
 }
-.modelBox4 {
-    background-image: url("https://www.stratstone.com/-/media/stratstone/porsche/new-cars/inline-images/panamera/2020-model/porsche-panamera-lifestyle-720x405px.ashx?mh=1440&la=en&h=405&w=720&mw=2560&hash=48C26AD097561C867C7A029DF46C4CB7");
-    background-position: center;
-    background-size: cover;
-}
-.modelBox5 {
-    background-image: url("https://media.autoexpress.co.uk/image/private/s--Z7DU5Snd--/f_auto,t_content-image-full-desktop@1/v1630401526/autoexpress/2021/08/Porsche%20Macan%20GTS%202021%20UK-19.jpg");
-    background-position: center;
-    
-}
-.modelBox6 {
-    background-image: url("https://clients.contology.com/Client/__Blank-Templates__/Trim-Page-Template/2020/Porsche/Cayenne/images/Image01.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
 .btnBuild {
     background: white;
     font-size: 1em;

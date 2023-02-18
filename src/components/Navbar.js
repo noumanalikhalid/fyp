@@ -143,8 +143,11 @@ const Navbar = () => {
               Dealers
             </li>
             <li>
-              <Person/>
-              My Porsche</li>
+            <Link to="/Account">
+             <Person/>
+              My Porsche
+             </Link>
+             </li>
             <li>
               <ThreeDotsVertical/>
             </li>

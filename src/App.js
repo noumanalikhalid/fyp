@@ -11,9 +11,12 @@ import ModelPanamera from './components/ModelPanamera';
 import ModelMacan from './components/ModelMacan';
 import ModelCayenne from './components/ModelCayenne';
 import { Built } from './components/PorscheCars/Built';
-
-function App() {
-
+import { Modify } from './components/Modify/Modify';
+import { Account } from './components/Accounts/Account';
+import { Login } from './components/Accounts/Login';
+import { Signup } from './components/Accounts/Signup';
+import { Account2 } from './components/Accounts/Account2';
+const  App = ()=> {
   return (
     <>
       <Router>
@@ -27,12 +30,15 @@ function App() {
           <Route path="Macan" element={<ModelMacan/> } />
           <Route path="Cayenne" element={<ModelCayenne/>} />
           <Route path='/Built' element={<Built/>}/>
+          <Route path='/Modify' element={<Modify/>}/>
+          <Route path='/Account'element={<Account/>}/>
+          <Route path='/Signup' element={<Signup/>}/>
+          <Route path='/Login'element={<Login/>}/>
+          <Route path='/Account2'element={<Account2/>}/>
         </Routes>
         <Discover/>
         <Footer/>
-      </Router>
-       
-        
+      </Router> 
     </>
   );
 }
